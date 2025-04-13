@@ -1,0 +1,190 @@
+.reports-container{
+    width: 100%;
+    height: 100%;
+    justify-content: center;
+    align-items: center;
+    display: flex;
+    flex-direction: column;
+
+}
+.filter-container{
+    width: 100%;
+    height: 6%;
+    background-color: var(--primary-color);
+    color: var(--bg-color);
+    display: flex;
+    flex-direction: row;
+    align-items: center;
+    justify-content: space-evenly;
+    border-radius: 10px 10px 0 0;
+}
+
+.filter-container.dark-section.dark-mode{
+    background-color: var(--card-color);
+}
+
+.filter-container.dark-section.dark-mode h4{
+    color: #fff;
+}
+
+/* Labels */
+.filter-container label {
+    font-size: 16px;
+    font-weight: 600;
+    color: #fff;
+    margin-right: 5px;
+}
+
+/* Select dropdowns and input */
+.filter-container select,
+.filter-container input {
+    min-width: 240px;
+    padding: 2px;
+    font-size: 14px;
+    border: 2px solid #ccc;
+    border-radius: 2px;
+    background: white;
+    color: #333;
+    transition: 0.3s ease-in-out;
+}
+
+/* Focus and hover effects */
+.filter-container select:focus,
+.filter-container input:focus {
+    border-color: #000000;
+    outline: none;
+    box-shadow: 0 0 5px rgba(248, 249, 250, 0.3);
+}
+
+.filter-container select:hover,
+.filter-container input:hover {
+    border-color: #000;
+}
+
+/* Disabled state for the date picker */
+.filter-container input:disabled {
+    background: #e9ecef;
+    color: #6c757d;
+    cursor: not-allowed;
+}
+
+/* Responsive Design */
+@media (max-width: 1300px) {
+    .filter-container {
+        padding: 1rem;
+        justify-content: start;
+        height: 40%;
+        flex-wrap: wrap;
+    }
+    .table-container{
+        height: 60%;
+        
+    }
+    
+    .filter-container label {
+        font-size: 14px;
+    }
+
+    .filter-container select,
+    .filter-container input {
+        width: 100%;
+    }
+}
+
+@media (max-width: 1000px) {
+    
+}
+
+.table-container {
+    border-radius: 0 0 10px 10px;
+    width: 100%;
+    height: 94%; 
+    overflow-y: auto;
+    background-color: #ddd; 
+    /* Hide scrollbar for Webkit browsers (Chrome, Safari) */
+    scrollbar-width: none; /* Firefox */
+    -ms-overflow-style: none;  /* Internet Explorer & Edge */
+    
+    
+}
+
+.table-container::-webkit-scrollbar {
+   display: none; /* Hide scrollbar for Chrome, Safari, Opera */
+}
+
+table {
+    width: 100%;
+    border-collapse: collapse;
+}
+
+thead {
+    position: sticky;
+    top: 0;  
+    z-index: 2;
+    border-bottom: 1px solid var(--border-color); 
+    box-shadow: 0 4px 6px rgba(0, 0, 0, 0.1);
+    background-color: var(--bg-color);
+    color: var(--text-color); 
+}
+
+thead.dark-section.dark-mode{
+    border-bottom: 1px solid var(--border-color); 
+    box-shadow: 0 4px 6px rgba(0, 0, 0, 0.1); 
+    background-color: var(--text-color); 
+    color: var(--bg-color); 
+}
+
+
+th, td {
+    padding: 10px;
+    border-bottom: 1px solid #ddd;
+    text-align: left;
+}
+
+
+tbody tr:nth-child(even) {
+    background-color: #f2f2f2;
+    
+}
+
+
+
+tbody tr {
+    color: black;
+    position: relative; /* Ensures the row is above other elements */
+    transition: transform 0.3s ease-in-out, box-shadow 0.3s ease-in-out;
+    cursor: pointer;
+}
+
+tbody tr:hover {
+    z-index: 1; 
+    transform: scale(0.96); 
+    box-shadow: 0 4px 10px rgba(0, 0, 0, 0.2); 
+    font-weight: bolder;
+}
+
+
+
+
+
+
+
+
+/* Spinner styles */
+.spinner {
+    display: none; /* Initially hidden */
+    width: 50px;
+    height: 50px;
+    border: 5px solid rgba(0, 0, 0, 0.1);
+    border-left-color: var(--primary-color); /* Blue spinner color */
+    border-radius: 50%;
+    animation: spin 1s linear infinite;
+    margin: auto;
+  }
+  
+  @keyframes spin {
+    to {
+      transform: rotate(360deg);
+    }
+  }
+  

@@ -1,0 +1,55 @@
+<!DOCTYPE html>
+<html lang="en">
+  <head>
+    <meta charset="UTF-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <title>Login</title>
+    <link
+      rel="icon"
+      type="image/x-icon"
+      href="{{ url_for('static', filename='SRC/favicon.ico') }}"
+    />
+    <link
+      rel="stylesheet"
+      href="{{ url_for('static', filename='CSS/style.css') }}"
+    />
+    <link
+      rel="stylesheet"
+      href="{{ url_for('static', filename='CSS/login.css') }}"
+    />
+  </head>
+  <body>
+    <div class="card">
+      <div class="header">
+        <img
+          src="{{ url_for('static', filename='SRC/super.png') }}"
+          alt="Super"
+        />
+      </div>
+      <div class="body">
+        <h3>Welcome Back!</h3>
+        <form action="/login" method="post">
+          <input
+            type="text"
+            id="username"
+            placeholder="Username"
+            name="username"
+            required
+          />
+          <input
+            type="password"
+            id="password"
+            placeholder="Password"
+            name="password"
+            required
+          />
+          <input type="submit" value="Login" id="btnLogin" />
+          <!-- Display error message if it exists -->
+          {% if error %}
+          <p class="error-message">{{ error }}</p>
+          {% endif %}
+        </form>
+      </div>
+    </div>
+  </body>
+</html>

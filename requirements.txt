@@ -1,0 +1,1 @@
+pip install Flask opcua pyodbc cryptography psycopg2

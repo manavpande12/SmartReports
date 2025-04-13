@@ -1,0 +1,38 @@
+<link
+  rel="stylesheet"
+  href="{{ url_for('static', filename='CSS/navbar.css') }}"
+/>
+
+<div class="navbar dark-section">
+  <i class="fa-solid fa-bars-staggered" id="menu-icon"></i>
+  <p>Monitoring System</p>
+  <img
+    src="{{ url_for('static', filename='SRC/super.png') }}"
+    alt="Super Image"
+  />
+</div>
+
+<div class="sidebar dark-section" id="sidebar">
+  <div class="sidebar-header dark-section">
+    <i class="fa-solid fa-xmark" id="cross-icon"></i>
+    <img
+      src="{{ url_for('static', filename='SRC/super.png') }}"
+      alt="Super Image"
+    />
+  </div>
+
+  <ul class="tile">
+    <li class="dark-section"><i class="fa-solid fa-house dark-section"></i><a class="dark-section" href="{{ url_for('dashboard') }}">Dashboard</a></li>
+    <li class="dark-section"><i class="fa-solid fa-file dark-section"></i></i><a class="dark-section" href="{{ url_for('stats') }}">Reports</a></li>
+  </ul>
+
+  <div class="bottom dark-section">
+    <button id="mode-toggle">
+      <i id="mode-icon" class="fa-solid fa-moon"></i> 
+      <span id="mode-text">Dark Mode</span>
+    </button>
+  </div>
+</div>
+
+
+<script src="{{ url_for('static', filename='JS/nav.js') }}"></script>

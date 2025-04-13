@@ -1,0 +1,13 @@
+<link rel="stylesheet" href="{{ url_for('static', filename='CSS/bar.css') }}" />
+<script src="https://cdn.jsdelivr.net/npm/chart.js"></script>
+
+<div class="chart-container">
+  <canvas id="vesselLevelChart" class="dark-section"></canvas>
+  <div class="chart-head">
+    <div id="Indicator1" class="Indicator1"></div>
+    <h3>Vessel Level Status</h3>
+    <div id="Indicator2" class="Indicator2"></div>
+  </div>
+</div>
+
+<script src="{{ url_for('static', filename='JS/bar.js') }}"></script>

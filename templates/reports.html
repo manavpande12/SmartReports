@@ -1,0 +1,69 @@
+<!DOCTYPE html>
+<html lang="en">
+  <head>
+    <meta charset="UTF-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <title>Reports</title>
+    {% block head %}{% endblock %}
+  </head>
+  <body class="dark-section">
+    {% include 'widgets/navbar.html' %}
+
+    <div class="container dark-section">
+      <div class="reports-container">
+        <div class="filter-container dark-section">
+          <!-- Time Filter -->
+          <label for="time-filter">Time Range:</label>
+          <select id="time-filter">
+            <option value="24h">Last 24 Hours</option>
+            <option value="7d">Last 7 Days</option>
+            <option value="1m">Last 1 Month</option>
+            <option value="all">All Data</option>
+          </select>
+
+          <!-- Destination Filter -->
+          <label for="destination-filter">Destination:</label>
+          <select id="destination-filter">
+            <option value="All Destination">All Destination</option>
+            <option value="Vessel 1">Vessel 1</option>
+            <option value="Vessel 2">Vessel 2</option>
+          </select>
+
+          <!-- Calendar for Date Selection -->
+          <label for="date-picker">Select Date:</label>
+          <input
+            type="text"
+            id="date-picker"
+            placeholder="Select a date"
+            readonly
+          />
+        </div>
+
+        <!-- Loading Animation -->
+        <div id="loading" class="spinner"></div>
+
+        <div class="table-container" id="table-container" style="display: none">
+          <table>
+            <thead class="dark-section">
+              <tr>
+                <th>Batch No</th>
+                <th>Start Time</th>
+                <th>End Time</th>
+                <th>Date</th>
+                <th>Set Qty</th>
+                <th>Act Qty</th>
+                <th>Destination</th>
+                <th>Error</th>
+              </tr>
+            </thead>
+            <tbody id="data-table-body">
+              <!-- Data will be inserted here dynamically -->
+            </tbody>
+          </table>
+        </div>
+      </div>
+    </div>
+
+    {% block scripts %}{% endblock %}
+  </body>
+</html>

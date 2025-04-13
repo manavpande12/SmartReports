@@ -1,0 +1,29 @@
+{% extends 'base.html'%} {% block head %}
+<link
+  rel="icon"
+  type="image/png"
+  href="{{ url_for('static', filename='SRC/favicon.png') }}"
+/>
+<link
+  rel="icon"
+  type="image/x-icon"
+  href="{{ url_for('static', filename='SRC/favicon.ico') }}"
+/>
+<link
+  rel="stylesheet"
+  href="{{ url_for('static', filename='CSS/style.css') }}"
+/>
+
+<link
+  rel="stylesheet"
+  href="{{ url_for('static', filename='CSS/dark-mode.css') }}"
+/>
+<script
+  src="https://kit.fontawesome.com/b00b18a9ea.js"
+  crossorigin="anonymous"
+></script>
+{% endblock %} {% block scripts %}
+
+<script src="{{ url_for('static', filename='JS/dark-mode.js') }}"></script>
+
+{% endblock %}

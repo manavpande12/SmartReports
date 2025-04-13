@@ -1,0 +1,19 @@
+.dark-mode {
+    --bg-color:#121212;
+    --card-color:#212121;
+    --text-color: #ffffff;
+    --primary-color: #213155;
+    --secondary-color: #03dac6;
+    --border-color:rgba(255, 255, 255, 0.1);
+}
+
+
+:root {
+    /* Light Mode Colors */
+    --bg-color: #ffffff;
+    --text-color: #000000;
+    --primary-color: #213155;
+    --secondary-color: #03dac6;
+    --border-color:rgba(0, 0, 0, 0.25);
+}
+
