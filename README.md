@@ -26,6 +26,7 @@ The **Smart Report Dashboard** is a real-time industrial data monitoring and rep
 - 📅 **Data Filters**:
   - Time-based: Last 24 hours, 7 days, 1 month, or all time.
   - Destination-based: **Vessel 1** or **Vessel 2**
+  - Date-based: No Data Locked dates & only available data date or unloacked. flatpickr library used !
 
 ---
 
@@ -34,12 +35,14 @@ The **Smart Report Dashboard** is a real-time industrial data monitoring and rep
 - **Backend**: Python  
   - Flask (Web server)  
   - OPC UA (python-opcua)  
-  - PyODBC  
+  - PyODBC
+  - psycopg2
   - Cryptography  
 - **Database**: PostgreSQL (for persistent storage)
 - **Frontend**: 
   - HTML, CSS, JavaScript  
   - **Chart.js** for real-time stacked bar graphs
+  - **flatpickr** for flexability data choice
 - **Simulation**: Prosys OPC UA Simulation Server
 
 ---
